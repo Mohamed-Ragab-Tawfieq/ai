@@ -7,7 +7,7 @@ $b1: #342d6c;
 $b2: #1d165c;
 body {
   overflow-x: hidden;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 // --- global ---
@@ -145,7 +145,7 @@ nav {
         font-size: 26px;
       }
       a {
-        color: $secondary;
+        color: $b2;
         &:hover {
           color: $primary;
         }
@@ -153,7 +153,7 @@ nav {
       .active {
         color: $primary;
         &:hover {
-          color: $secondary;
+          color: $b2;
         }
       }
     }
@@ -163,12 +163,16 @@ nav {
 .header-on-scroll.show-lg {
   display: block;
   transform: translateY(0);
+  box-shadow: 0px 1px 10px #999;
   z-index: 50;
-  .brand {
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    transform: translateY(-50%);
+  ul {
+    padding: 10px;
+    .brand {
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -240,6 +244,7 @@ section.solutions {
   }
   h2 {
     color: $b2;
+    font-weight: 900;
   }
   ul {
     list-style-type: none;
@@ -317,10 +322,8 @@ section.mission {
   }
   h2 {
     color: $b2;
+    font-weight: 900;
     padding: 15px 0;
-  }
-  p {
-    width: 70%;
   }
 
   .sub-vision,
@@ -346,15 +349,35 @@ section.mission {
 
   ul.right {
     padding: 20px;
-    text-align: center;
     li {
       display: inline-block;
-      padding: 0 10px;
+      padding: 10px;
       color: $b2;
       font-size: 20px;
       cursor: pointer;
 
+      &:nth-of-type(2) {
+        b {
+          border-left: 1px solid rgba(128, 128, 128, 0.5);
+          border-right: 1px solid rgba(128, 128, 128, 0.5);
+          padding: 0 10px;
+        }
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        padding-top: 10px;
+        border-bottom: solid 3px $primary;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+
       &:hover {
+        &:after {
+          transform: scaleX(1);
+        }
+
         span.check {
           background: $primary;
           .fa-check {
@@ -362,11 +385,6 @@ section.mission {
             color: $primary;
           }
         }
-      }
-
-      &:nth-of-type(2) {
-        border-left: 1px solid rgba(128, 128, 128, 0.5);
-        border-right: 1px solid rgba(128, 128, 128, 0.5);
       }
 
       span.check {
@@ -391,6 +409,73 @@ section.mission {
 }
 
 // --- /mission section ---
+
+// --- work-process section ---
+
+section.work-process {
+  small {
+    color: $a2;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: $b2;
+    font-weight: 900;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 30px;
+    li {
+      margin: auto 50px;
+
+      &:hover {
+        span.num {
+          color: $a1;
+          transition: color 0.2s ease-in-out;
+          i {
+            transform: scale(1);
+            transition: transform 0.5s ease-in-out;
+          }
+        }
+      }
+
+      span.num {
+        position: relative;
+        padding: 5px 10px;
+        margin-left: 45%;
+        border: 1px solid rgba(128, 128, 128, 0.5);
+        border-radius: 50%;
+        color: $b2;
+        font-weight: bold;
+        z-index: 5;
+        i {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: $primary;
+          transform: scale(0);
+          transition: transform 250ms ease-in-out;
+          z-index: -1;
+        }
+      }
+
+      p:first-of-type {
+        font-size: 20px;
+        font-weight: bold;
+        color: $b2;
+        margin-top: 10px;
+      }
+
+      p:last-of-type {
+        color: $a2;
+      }
+    }
+  }
+}
+
+// --- /work-process section ---
 
 /* ----------------------------------------------------------------------------------- */
 // ---- lg ---
@@ -567,5 +652,12 @@ section.mission {
         margin-bottom: 5px;
       }
     }
+  }
+
+  // mission section
+  .mission ul.right li b {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 0 !important;
   }
 }

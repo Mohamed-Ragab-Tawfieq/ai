@@ -1,227 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiConsulty</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+      integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AiConsulty</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-    integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <!-- header -->
-  <header class="first-header">
-    <a href="" class="brand text-center d-block d-md-none">AiConsulty</a>
-    <div class="right mx-3">
-      <div class="d-block d-sm-inline">
-        <i class="bi bi-headphones"></i>
-        <span>Start your project today</span>
-        <span>+201122535917</span>
-      </div>
-      <div class="d-block d-sm-inline">
-        <span class="social">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-google-plus-g"></i>
-          <i class="fab fa-skype"></i>
-        </span>
-        <span>
-          <i class="bi bi-search"></i>
-          <label for="search">Search</label>
-        </span>
-      </div>
-    </div>
-    <hr />
-    <div class="py-3 d-block d-md-none">
-      <span class="custombtn d-inline d-md-none">Get in Touch</span>
-      <i class="fa fa-bars d-inline d-md-none mr-3"></i>
-    </div>
-  </header>
-  <!-- /header -->
-
-  <!-- header on scroll  -->
-  <header class="header-on-scroll">
-    <ul>
-      <li class="x-btn d-md-none">
-        <i class="bi bi-x"></i>
-      </li>
-      <li class="py-3">
-        <a href="" class="brand">AiConsulty</a>
-      </li>
-      <hr class="d-md-none">
-      <li class="active">
-        <a href=""">Home <i class=" bi bi-chevron-down"></i></a>
-      </li>
-      <hr class="d-md-none">
-      <li>
-        <a href="">Company <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <hr class="d-md-none">
-      <li>
-        <a href="">Services <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <hr class="d-md-none">
-      <li>
-        <a href="">Works <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <hr class="d-md-none">
-      <li>
-        <a href="">Blog</a>
-      </li>
-      <hr class="d-md-none">
-      <li>
-        <a href="">Elements</a>
-      </li>
-      <hr class="d-md-none">
-      <button class="custombtn d-none d-md-inline">Get in Touch</button>
-    </ul>
-  </header>
-
-  <div class="overlay"></div>
-  <!-- /header on scroll  -->
-
-  <!-- navbar  -->
-  <nav class="d-none d-md-block">
-    <div class="brand-lg py-3">
-      <h2>AiConsulty</h2>
-    </div>
-    <ul>
-      <li class="active">
-        <a href="">Home <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <li>
-        <a href="">Company <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <li>
-        <a href="">Services <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <li>
-        <a href="">Works <i class="bi bi-chevron-down"></i></a>
-      </li>
-      <li>
-        <a href="">Blog</a>
-      </li>
-      <li>
-        <a href="">Elements</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /navbar  -->
-
-  <!-- first section -->
-
-  <section class="first-section">
-    <div class="col-md-6">
-      <h1 class="w-md-50">Every thing about artificial intelligence</h1>
-      <p>AiConsulty bring the power of data science and artificial intelligence to every business.</p>
-      <ul>
-        <button><i>&#9632;</i> Learn More <i>&plus;</i></button>
-        <button>Get Started <i>&plus;</i></button>
-      </ul>
-    </div>
-  </section>
-
-  <!-- /first section -->
-
-  <!-- solutions -->
-
-  <section class="solutions text-center py-5">
-    <small>more than solutions</small>
-    <h2>Ai solutions for startup and enterprises </h2>
-    <ul class="row p-0">
-      <div class="col-md-3">
-        <li>
-          <p>Data Science</p>
-          <div>
-            <figure>
-              <img src="images/solutions/dashboard.svg" width="60" height="60" alt="">
-            </figure>
-          </div>
-          <p>Simple & easy distinguish in a free hour, when our power choice prevents</p>
-        </li>
-      </div>
-      <div class="col-md-3">
-        <li>
-          <p>Machine Learning</p>
-          <div>
-            <figure>
-              <img src="images/solutions/ai.svg" width="60" height="60" alt="">
-            </figure>
-          </div>
-          <p>Claims duty the obligations of busines it will frequently occur that all pleasures. </p>
-        </li>
-      </div>
-      <div class="col-md-3">
-        <li>
-          <p>Artificial Intelligence</p>
-          <div>
-            <figure>
-              <img src="images/solutions/connection.svg" width="60" height="60" alt="">
-            </figure>
-          </div>
-          <p>Therefore always hold these matters to this principle of reject pleasures secure. </p>
-        </li>
-      </div>
-      <div class="col-md-3">
-        <li>
-          <p>BI Implementation</p>
-          <div>
-            <figure>
-              <img src="images/solutions/machine-learning.svg" width="60" height="60" alt="">
-            </figure>
-          </div>
-          <p>Trouble that bound ensue equaly blame belongs to those through weakness. </p>
-        </li>
-      </div>
-    </ul>
-  </section>
-
-  <!-- /solutions -->
-
-  <!-- mission section -->
-  <section class="mission">
-    <div class="row">
-      <div class="col-md-5">
-        <small>about company</small>
-        <div class="sub-mission">
-          <h2 class="sub-mission">Mission is to bring the power of AI to every business </h2>
-          <h2 class="sub-vision">Vision is to bring the power of AI to every business </h2>
-          <h2 class="sub-values">Core values are to bring the power of AI to every business </h2>
-          <p>As a solution providing company we offer a wide range of consulting, development & quality services with
-            100%
-            satisfaction. </p>
+  <body>
+    <!-- header -->
+    <header class="first-header">
+      <a href="" class="brand text-center d-block d-md-none">AiConsulty</a>
+      <div class="right mx-3">
+        <div class="d-block d-sm-inline">
+          <i class="bi bi-headphones"></i>
+          <span>Start your project today</span>
+          <span>+201122535917</span>
         </div>
-        <ul class="left">
-          <li><span><i class="fa fa-circle"></i></span>Idea of denouncing pleasure & praising </li>
-          <li><span><i class="fa fa-circle"></i></span>Ever undertakes laborious physical </li>
-          <li><span><i class="fa fa-circle"></i></span>Avoids a pain that produces no resultant </li>
-          <li><span><i class="fa fa-circle"></i></span>Great explorer of the real truth </li>
-        </ul>
+        <div class="d-block d-sm-inline">
+          <span class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-skype"></i>
+          </span>
+          <span>
+            <i class="bi bi-search"></i>
+            <label for="search">Search</label>
+          </span>
+        </div>
       </div>
-      <div class="col-md-7">
-        <img src="images/mission/AI-in-web-development-5743.webp" class='img-fluid img-thumbnail' alt="Mission">
-        <ul class="right">
-          <li><span class="check"><i class="fa fa-check"></i></span> Our Mission</li>
-          <li><span class="check"><i class="fa fa-check"></i></span> Our Vision</li>
-          <li><span class="check"><i class="fa fa-check"></i></span> Our Values</li>
-        </ul>
+      <hr />
+      <div class="py-3 d-block d-md-none">
+        <span class="custombtn d-inline d-md-none">Get in Touch</span>
+        <i class="fa fa-bars d-inline d-md-none mr-3"></i>
       </div>
-    </div>
-  </section>
-  <!-- /mission section -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    </header>
+    <!-- /header -->
 
+    <!-- header on scroll  -->
+    <header class="header-on-scroll">
+      <ul>
+        <li class="x-btn d-md-none">
+          <i class="bi bi-x"></i>
+        </li>
+        <li class="py-3">
+          <a href="" class="brand">AiConsulty</a>
+        </li>
+        <hr class="d-md-none" />
+        <li class="active">
+          <a href="">Home <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <hr class="d-md-none" />
+        <li>
+          <a href="">Company <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <hr class="d-md-none" />
+        <li>
+          <a href="">Services <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <hr class="d-md-none" />
+        <li>
+          <a href="">Works <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <hr class="d-md-none" />
+        <li>
+          <a href="">Blog</a>
+        </li>
+        <hr class="d-md-none" />
+        <li>
+          <a href="">Elements</a>
+        </li>
+        <hr class="d-md-none" />
+        <button class="custombtn d-none d-md-inline">Get in Touch</button>
+      </ul>
+    </header>
+
+    <div class="overlay"></div>
+    <!-- /header on scroll  -->
+
+    <!-- navbar  -->
+    <nav class="d-none d-md-block">
+      <div class="brand-lg py-3">
+        <h2>AiConsulty</h2>
+      </div>
+      <ul>
+        <li class="active">
+          <a href="">Home <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <li>
+          <a href="">Company <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <li>
+          <a href="">Services <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <li>
+          <a href="">Works <i class="bi bi-chevron-down"></i></a>
+        </li>
+        <li>
+          <a href="">Blog</a>
+        </li>
+        <li>
+          <a href="">Elements</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /navbar  -->
+
+    <!-- first section -->
+
+    <section class="first-section">
+      <div class="col-md-6">
+        <h1 class="w-md-50">Every thing about artificial intelligence</h1>
+        <p>
+          AiConsulty bring the power of data science and artificial intelligence
+          to every business.
+        </p>
+        <ul>
+          <button><i>&#9632;</i> Learn More <i>&plus;</i></button>
+          <button>Get Started <i>&plus;</i></button>
+        </ul>
+      </div>
+    </section>
+
+    <!-- /first section -->
+
+    <!-- solutions -->
+
+    <section class="solutions text-center py-5">
+      <small>more than solutions</small>
+      <h2>Ai solutions for startup and enterprises</h2>
+      <ul class="row p-0">
+        <div class="col-md-3">
+          <li>
+            <p>Data Science</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/dashboard.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p>
+              Simple & easy distinguish in a free hour, when our power choice
+              prevents
+            </p>
+          </li>
+        </div>
+        <div class="col-md-3">
+          <li>
+            <p>Machine Learning</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/ai.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p>
+              Claims duty the obligations of busines it will frequently occur
+              that all pleasures.
+            </p>
+          </li>
+        </div>
+        <div class="col-md-3">
+          <li>
+            <p>Artificial Intelligence</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/connection.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p>
+              Therefore always hold these matters to this principle of reject
+              pleasures secure.
+            </p>
+          </li>
+        </div>
+        <div class="col-md-3">
+          <li>
+            <p>BI Implementation</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/machine-learning.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p>
+              Trouble that bound ensue equaly blame belongs to those through
+              weakness.
+            </p>
+          </li>
+        </div>
+      </ul>
+    </section>
+
+    <!-- /solutions -->
+
+    <!-- mission section -->
+    <section class="mission">
+      <div class="row">
+        <div class="col-md-5">
+          <small>about company</small>
+          <div class="sub-mission">
+            <h2 class="sub-mission">
+              Mission is to bring the power of AI to every business
+            </h2>
+            <h2 class="sub-vision">
+              Vision is to bring the power of AI to every business
+            </h2>
+            <h2 class="sub-values">
+              Core values are to bring the power of AI to every business
+            </h2>
+            <p>
+              As a solution providing company we offer a wide range of
+              consulting, development & quality services with 100% satisfaction.
+            </p>
+          </div>
+          <ul class="left">
+            <li>
+              <span><i class="fa fa-circle"></i></span>
+              Idea of denouncing pleasure & praising
+            </li>
+            <li>
+              <span><i class="fa fa-circle"></i></span>
+              Ever undertakes laborious physical
+            </li>
+            <li>
+              <span><i class="fa fa-circle"></i></span>
+              Avoids a pain that produces no resultant
+            </li>
+            <li>
+              <span><i class="fa fa-circle"></i></span>
+              Great explorer of the real truth
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-7">
+          <img
+            src="images/mission/AI-in-web-development-5743.webp"
+            class="img-fluid img-thumbnail"
+            alt="Mission"
+          />
+          <ul class="right row">
+            <li class="col-md-3">
+              <span class="check"><i class="fa fa-check"></i></span>
+              <b>Our Mission</b>
+            </li>
+            <li class="col-md-3">
+              <b>
+                <span class="check"><i class="fa fa-check"></i></span>
+                Our Vision
+              </b>
+            </li>
+            <li class="col-md-3">
+              <span class="check"><i class="fa fa-check"></i></span>
+              <b>Our Values</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /mission section -->
+
+    <!-- work-process section -->
+    <section class="work-process text-center py-5">
+      <small>our work process</small>
+      <h2 class="pb-5">Data science solutions for startup</h2>
+      <ul class="row px-5">
+        <div class="col-md-4">
+          <li>
+            <span class='num'><i></i>1</span>
+            <p>frame the problem</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/dashboard.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p> To take a trivial example, which idea of ever undertakes. </p>
+          </li>
+        </div>
+        <div class="col-md-4">
+          <li>
+            <span class='num'><i></i>2</span>
+            <p>collect the data</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/ai.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p> Best every pleasure is too welcomed every pain avoided. </p>
+          </li>
+        </div>
+        <div class="col-md-4">
+          <li>
+            <span class='num'><i></i>3</span>
+            <p>process the data</p>
+            <div>
+              <figure>
+                <img
+                  src="images/solutions/connection.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <p> Have to be repudiated annoyances accepted the wise. </p>
+          </li>
+        </div>
+      </ul>
+    </section>
+    <!-- /work-process section -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
