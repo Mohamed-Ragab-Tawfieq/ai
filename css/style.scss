@@ -1,13 +1,13 @@
 $primary: #fa475f;
 $secondary: #6129ac;
 $a1: #fff;
-$a2: gray;
+$a2: #808080;
 $a3: #333;
 $b1: #342d6c;
 $b2: #1d165c;
 body {
   overflow-x: hidden;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 // --- global ---
@@ -320,7 +320,73 @@ section.mission {
     padding: 15px 0;
   }
   p {
-    width: 50%;
+    width: 70%;
+  }
+
+  .sub-vision,
+  .sub-values {
+    display: none;
+  }
+
+  ul.left {
+    list-style-type: none;
+    li {
+      span {
+        margin-right: 10px;
+        i {
+          font-size: 10px;
+          padding: 1px;
+          color: $primary;
+          border: 1px solid $primary;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  ul.right {
+    padding: 20px;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      color: $b2;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        span.check {
+          background: $primary;
+          .fa-check {
+            font-weight: bold;
+            color: $primary;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        border-left: 1px solid rgba(128, 128, 128, 0.5);
+        border-right: 1px solid rgba(128, 128, 128, 0.5);
+      }
+
+      span.check {
+        width: 25px;
+        height: 25px;
+        padding: 2px;
+        border: 1px solid $a2;
+        background: $a1;
+        border-radius: 50%;
+        .fa-check {
+          position: relative;
+          left: 5px;
+          top: -3px;
+          color: $a2;
+          font-size: 24px;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: $a1;
+        }
+      }
+    }
   }
 }
 
@@ -427,7 +493,6 @@ section.mission {
             top: 50%;
             transform: translateY(-50%);
           }
-
         }
       }
     }
@@ -458,7 +523,6 @@ section.mission {
     z-index: 30;
     transform: translateX(100%);
     transition: all 0.6s ease-in-out;
-
   }
 
   .overlay.active {

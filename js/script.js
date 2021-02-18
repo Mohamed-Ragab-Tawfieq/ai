@@ -1,5 +1,7 @@
 AOS.init();
 
+/* ---------- header ---------- */
+
 // header on scroll
 $(window).scroll(function (event) {
   var scroll = $(window).scrollTop();
@@ -28,3 +30,14 @@ $('.overlay').click(function () {
   $('.header-on-scroll').removeClass('show-sm');
   $('.overlay').removeClass('active');
 });
+
+/* ---------- /header ---------- */
+
+/* ---------- mission section ---------- */
+$('.mission ul.right li:nth-child(2)').click(function() {
+  $()
+})
+
+/* ---------- /mission section ---------- */
+
+
