@@ -1,5 +1,5 @@
-$primary: #fa475f;
-$secondary: #6129ac;
+$primary: #9ec452;
+$secondary: #2596be;
 $a1: #fff;
 $a2: #808080;
 $a3: #333;
@@ -25,15 +25,14 @@ body {
   border: 0;
   outline: 0;
   padding: 15px;
-  background: linear-gradient(45deg, #a10c20, $primary);
+  background: linear-gradient(45deg, $secondary, $primary);
   color: $a1;
   font-size: 20px;
 }
 
 // --- header ---
 header.first-header {
-  background: $primary;
-  color: $a1;
+  color: $primary;
   font-size: 16px;
   text-align: right;
 
@@ -141,8 +140,9 @@ nav {
 
   ul {
     li {
-      .brand {
-        font-size: 26px;
+      .brand img {
+        width: 60px;
+        height: 70px;
       }
       a {
         color: $b2;
@@ -217,7 +217,7 @@ nav {
       @extend .custombtn;
       padding: 15px 32px;
       color: $a1;
-      background: linear-gradient(45deg, #a10c20, $primary);
+      background: linear-gradient(45deg, $primary, $secondary);
       min-width: 210px;
       i {
         background: $a1;
@@ -259,7 +259,7 @@ section.solutions {
       z-index: 7;
 
       &:hover {
-        background: linear-gradient(90deg, $primary, #da1832);
+        background: linear-gradient(90deg, $primary, $secondary);
         transition: all 0.5s ease-in-out;
         p {
           color: $a1 !important;
@@ -424,6 +424,7 @@ section.work-process {
   ul {
     list-style-type: none;
     margin-top: 30px;
+
     li {
       margin: auto 50px;
 
