@@ -1,5 +1,5 @@
-$primary: #9ec452;
-$secondary: #2596be;
+$secondary: #9ec452;
+$primary: #2596be;
 $a1: #fff;
 $a2: #808080;
 $a3: #333;
@@ -32,7 +32,7 @@ body {
 
 // --- header ---
 header.first-header {
-  color: $primary;
+  color: $secondary;
   font-size: 16px;
   text-align: right;
 
@@ -79,17 +79,14 @@ header.first-header {
 // --- navbar ---
 
 nav {
-  background: $primary;
   .brand-lg {
     position: absolute;
     top: 0;
     text-align: left;
     margin-left: 50px;
-    border: 1px solid $a1;
-    border-top: 0;
-    h2 {
-      color: $a1;
-      padding: 10px;
+    img {
+      width: 140px;
+      height: 116px;
     }
   }
 
@@ -109,7 +106,7 @@ nav {
       display: inline-block;
       margin: auto 15px;
       a {
-        color: $a1;
+        color: $primary;
         font-size: 20px;
         font-weight: bold;
         &:hover {
@@ -141,11 +138,11 @@ nav {
   ul {
     li {
       .brand img {
-        width: 60px;
-        height: 70px;
+        width: 87.5px;
+        height: 72.5px;
       }
       a {
-        color: $b2;
+        color: $primary;
         &:hover {
           color: $primary;
         }
@@ -153,7 +150,7 @@ nav {
       .active {
         color: $primary;
         &:hover {
-          color: $b2;
+          color: $primary;
         }
       }
     }
@@ -183,13 +180,12 @@ nav {
 // --- first section ---
 
 .first-section {
-  background: $primary;
   padding: 50px 20px;
   h1 {
     margin-top: 70px;
     font-size: 60px;
     font-weight: bold;
-    color: $b2;
+    color: $primary;
   }
   p {
     margin-top: 50px;
@@ -203,8 +199,8 @@ nav {
     button:first-of-type {
       @extend .custombtn;
       display: inline;
-      background: rgba(238, 238, 238, 0.2);
-      color: $b2;
+      background: rgba(238, 238, 238, 0.8);
+      color: $primary;
       font-weight: bold;
       min-width: 210px;
       i {
@@ -243,7 +239,7 @@ section.solutions {
     text-transform: uppercase;
   }
   h2 {
-    color: $b2;
+    color: $primary;
     font-weight: 900;
   }
   ul {
@@ -272,7 +268,7 @@ section.solutions {
         margin: 15px;
       }
       p:first-of-type {
-        color: $b2;
+        color: $primary;
         font-size: 20px;
         z-index: 6000000;
       }
@@ -321,7 +317,7 @@ section.mission {
     padding: 15px 0;
   }
   h2 {
-    color: $b2;
+    color: $primary;
     font-weight: 900;
     padding: 15px 0;
   }
@@ -352,7 +348,7 @@ section.mission {
     li {
       display: inline-block;
       padding: 10px;
-      color: $b2;
+      color: $primary;
       font-size: 20px;
       cursor: pointer;
 
@@ -418,7 +414,7 @@ section.work-process {
     text-transform: uppercase;
   }
   h2 {
-    color: $b2;
+    color: $primary;
     font-weight: 900;
   }
   ul {
@@ -445,7 +441,7 @@ section.work-process {
         margin-left: 45%;
         border: 1px solid rgba(128, 128, 128, 0.5);
         border-radius: 50%;
-        color: $b2;
+        color: $primary;
         font-weight: bold;
         z-index: 5;
         i {
@@ -465,7 +461,7 @@ section.work-process {
       p:first-of-type {
         font-size: 20px;
         font-weight: bold;
-        color: $b2;
+        color: $primary;
         margin-top: 10px;
       }
 
@@ -499,19 +495,27 @@ section.work-process {
 @media all and (max-width: 992px) {
   // first header
   .first-header {
+    img {
+      width: 140px;
+      height: 116px;
+    }
+
     .right {
       margin: 0 auto;
       text-align: center;
     }
+
     hr {
       margin: 5px auto !important;
       width: 90% !important;
       text-align: center !important;
       float: none !important;
     }
+
     div.py-3 {
       position: relative;
       .fa-bars {
+        color: $primary;
         font-size: 20px;
         cursor: pointer;
         vertical-align: middle;
@@ -535,7 +539,7 @@ section.work-process {
     display: block;
     height: 100%;
     width: 45%;
-    background: $b2;
+    background: $b1;
     transform: translateX(150%);
     transition: all 0.5s ease-in-out;
 
@@ -546,15 +550,15 @@ section.work-process {
       width: 100%;
 
       .x-btn {
-        display: inline;
-        padding: 15px 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
         opacity: 1;
+        z-index: 5;
         cursor: pointer;
 
         .bi-x {
-          float: right;
-          padding-right: 15px;
-          color: $a1;
+          color: $b2;
           font-size: 22px;
         }
       }
@@ -581,6 +585,12 @@ section.work-process {
           }
         }
       }
+
+      li:nth-of-type(2) {
+        background: $a1;
+        margin: 0;
+        padding: 0;
+      }
     }
 
     hr {
@@ -595,6 +605,11 @@ section.work-process {
     position: fixed;
     transform: translateX(0);
     transition: all 0.5s ease-in-out;
+
+    img {
+      width: 105px !important;
+      height: 87px !important;
+    }
   }
 
   // overlay effect
