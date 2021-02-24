@@ -9,13 +9,21 @@ body {
 
 /* ###### */
 .custombtn, .first-section ul button:first-of-type, .first-section ul button:last-of-type {
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0;
   outline: 0;
-  padding: 15px;
-  background: linear-gradient(45deg, #9ec452, #2596be);
+  padding: 10px 15px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9ec452), color-stop(50%, #cad315), to(#9ec452));
+  background-image: linear-gradient(to right, #9ec452 0%, #cad315 50%, #9ec452 100%);
+  background-size: 200% auto;
   color: #fff;
   font-size: 20px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.custombtn:hover, .first-section ul button:hover:first-of-type, .first-section ul button:hover:last-of-type {
+  background-position: right center;
 }
 
 header.first-header {
@@ -471,6 +479,118 @@ section.work-process ul li p:last-of-type {
   color: #808080;
 }
 
+footer {
+  background: #2596be;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style-type: none;
+  text-transform: capitalize;
+  display: inline-block;
+  padding-left: 0;
+}
+
+footer ul.col-12 {
+  display: inline;
+}
+
+footer ul.col-12 h4 {
+  margin-bottom: 30px;
+}
+
+footer ul.col-12 i {
+  display: inline;
+}
+
+footer ul.col-12 p {
+  margin: -5px auto 10px;
+}
+
+footer ul.col-12 label,
+footer ul.col-12 address {
+  display: inline-block;
+  margin: 0;
+  text-transform: lowercase;
+  opacity: 0.5;
+}
+
+footer ul.links ul li {
+  margin: 10px auto;
+}
+
+footer ul.links ul li a {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+footer ul.links ul li a:hover {
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+footer ul.links ul li a:hover i {
+  opacity: 1;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+footer ul.links ul li a i {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9ec452;
+  font-size: 12px;
+  margin-right: 5px;
+  opacity: 0;
+}
+
+footer ul.links ul li:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+footer ul.about p {
+  opacity: 0.5;
+}
+
+footer ul.about input[type='email'] {
+  border: 1px solid rgba(158, 196, 82, 0.5);
+  border-radius: 10px;
+  height: 50px;
+  width: 60%;
+  background: #1687a7;
+}
+
+footer ul.about input[type='email']::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+footer ul.about input[type='email']:-ms-input-placeholder {
+  color: #ddd;
+}
+
+footer ul.about input[type='email']::-ms-input-placeholder {
+  color: #ddd;
+}
+
+footer ul.about input[type='email']::placeholder {
+  color: #ddd;
+}
+
+footer ul.about input[type='email']:focus {
+  outline: none;
+}
+
 /* ----------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 @media all and (min-width: 992px) {
@@ -521,7 +641,7 @@ section.work-process ul li p:last-of-type {
     display: block;
     height: 100%;
     width: 45%;
-    background: #342d6c;
+    background: #1687a7;
     -webkit-transform: translateX(150%);
             transform: translateX(150%);
     -webkit-transition: all 0.5s ease-in-out;
@@ -542,7 +662,7 @@ section.work-process ul li p:last-of-type {
     cursor: pointer;
   }
   .header-on-scroll ul .x-btn .bi-x {
-    color: #1d165c;
+    color: #cad315;
     font-size: 22px;
   }
   .header-on-scroll ul li {
@@ -606,6 +726,12 @@ section.work-process ul li p:last-of-type {
             transform: translateX(0);
     -webkit-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
+  }
+  footer .container {
+    margin: 0;
+  }
+  footer .container h4 {
+    margin: 10px auto !important;
   }
 }
 

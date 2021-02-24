@@ -1,5 +1,3 @@
-AOS.init();
-
 /* ---------- header ---------- */
 
 // header on scroll
