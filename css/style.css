@@ -252,6 +252,11 @@ section.solutions ul li:hover {
   transition: all 0.5s ease-in-out;
 }
 
+section.solutions ul li:hover div {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 section.solutions ul li:hover p {
   color: #fff !important;
   -webkit-transition: all 0.3s ease-in-out;
@@ -276,6 +281,15 @@ section.solutions ul li div {
   border: 1px solid #fff;
   border-radius: 50%;
   margin: 0 auto;
+}
+
+section.solutions ul li div .fa-circle {
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  width: 5px;
+  height: 5px;
+  color: #fff;
 }
 
 section.solutions ul li div figure {
@@ -532,15 +546,15 @@ footer ul.links ul li a {
 }
 
 footer ul.links ul li a i {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: -20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-right: 5px;
   color: #9ec452;
-  font-size: 12px;
-  opacity: 1;
+  font-size: 10px;
+  opacity: 0;
 }
 
 footer ul.links ul li a:hover {
@@ -586,6 +600,39 @@ footer ul.about input[type='email']::placeholder {
 
 footer ul.about input[type='email']:focus {
   outline: none;
+}
+
+.go-top {
+  position: absolute;
+  top: -100px;
+  right: 20px;
+  z-index: 50;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.go-top button {
+  background: transparent;
+  font-size: 22px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.go-top button:hover {
+  background: #2596be;
+  color: #fff;
+  border: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.go-top.active {
+  position: fixed;
+  top: 90%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 /* ----------------------------------------------------------------------------------- */

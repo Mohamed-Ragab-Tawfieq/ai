@@ -3,15 +3,18 @@
 // header on scroll
 $(window).scroll(function (event) {
   var scroll = $(window).scrollTop();
+
   if (scroll > 50) {
+    $('.go-top').addClass('active');
+
     if ($(window).width() > 992) {
       $('.header-on-scroll').addClass('show-lg');
     }
   } else {
     $('.header-on-scroll').removeClass('show-lg');
+    $('.go-top').removeClass('active');
   }
 });
-
 
 // fa-bars on click {
 $('.first-header .fa-bars').click(function () {
@@ -32,19 +35,17 @@ $('.overlay').click(function () {
 /* ---------- /header ---------- */
 
 /* ---------- mission section ---------- */
-$('.mission ul.right li:first-child').click(function() {
+$('.mission ul.right li:first-child').click(function () {
   $('.mission h2.sub-mission').siblings().fadeOut(100);
   $('.mission h2.sub-mission').fadeIn();
-})
-$('.mission ul.right li:nth-child(2)').click(function() {
+});
+$('.mission ul.right li:nth-child(2)').click(function () {
   $('.mission h2.sub-vision').siblings().fadeOut(100);
   $('.mission h2.sub-vision').fadeIn();
-})
-$('.mission ul.right li:last-child').click(function() {
+});
+$('.mission ul.right li:last-child').click(function () {
   $('.mission h2.sub-values').siblings().fadeOut(100);
   $('.mission h2.sub-values').fadeIn();
-})
+});
 
 /* ---------- /mission section ---------- */
-
-
