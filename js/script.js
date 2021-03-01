@@ -49,3 +49,40 @@ $('.mission ul.right li:last-child').click(function () {
 });
 
 /* ---------- /mission section ---------- */
+
+/* ---------- solutions section ---------- */
+$('section.solutions li').hover(function () {
+  $(this).find('span').toggleClass('fa-spin');
+  $(this).find('span .fa-circle').fadeToggle(200);
+});
+/* ---------- /solutions section ---------- */
+
+/* ---------- work-process section ---------- */
+$('section.work-process li').hover(function () {
+  $(this).find('.overlay').toggleClass('active');
+});
+/* ---------- /work-process section ---------- */
+
+/* ---------- go-top ---------- */
+$(document).ready(function () {
+  var scrollTop = $('.go-top');
+  $(scrollTop).click(function () {
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+    return false;
+  });
+  $('#homeLink').click(function () {
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+    return false;
+  });
+});
+/* ---------- end of go-top ---------- */

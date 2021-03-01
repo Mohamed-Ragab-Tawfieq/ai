@@ -120,9 +120,10 @@ nav ul li a:hover, .header-on-scroll ul li a:hover {
   top: 0;
   left: 0;
   right: 0;
-  display: none;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background: #fff;
   z-index: 50;
 }
@@ -149,7 +150,6 @@ nav ul li a:hover, .header-on-scroll ul li a:hover {
 }
 
 .header-on-scroll.show-lg {
-  display: block;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   -webkit-box-shadow: 0px 1px 10px #999;
@@ -198,6 +198,10 @@ nav ul li a:hover, .header-on-scroll ul li a:hover {
   color: #2596be;
   font-weight: bold;
   min-width: 210px;
+}
+
+.first-section ul button:first-of-type:hover {
+  background-image: none;
 }
 
 .first-section ul button:first-of-type i {
@@ -252,11 +256,6 @@ section.solutions ul li:hover {
   transition: all 0.5s ease-in-out;
 }
 
-section.solutions ul li:hover div {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 section.solutions ul li:hover p {
   color: #fff !important;
   -webkit-transition: all 0.3s ease-in-out;
@@ -274,7 +273,7 @@ section.solutions ul li p:first-of-type {
   z-index: 6000000;
 }
 
-section.solutions ul li div {
+section.solutions ul li span {
   position: relative;
   width: 105px;
   height: 105px;
@@ -283,21 +282,23 @@ section.solutions ul li div {
   margin: 0 auto;
 }
 
-section.solutions ul li div .fa-circle {
+section.solutions ul li span .fa-circle {
+  display: none;
   position: absolute;
-  top: -7px;
+  top: -5px;
   left: -5px;
   width: 5px;
   height: 5px;
+  font-size: 0.5em;
   color: #fff;
 }
 
-section.solutions ul li div figure {
+section.solutions ul li figure {
   position: relative;
   margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 117%;
+  -webkit-transform: translateY(-117%);
+          transform: translateY(-117%);
   width: 90px;
   height: 90px;
   text-align: center;
@@ -305,7 +306,7 @@ section.solutions ul li div figure {
   background: #fff;
 }
 
-section.solutions ul li div figure img {
+section.solutions ul li figure img {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -434,7 +435,15 @@ section.work-process ul {
 }
 
 section.work-process ul li {
+  position: relative;
+  padding: 20px 10px;
   margin: auto 50px;
+}
+
+section.work-process ul li:hover * {
+  color: #fff !important;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 section.work-process ul li:hover span.num {
@@ -450,6 +459,34 @@ section.work-process ul li:hover span.num i {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+section.work-process ul li .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(#2596be), to(#9ec452));
+  background: linear-gradient(90deg, #2596be, #9ec452);
+}
+
+section.work-process ul li .overlay.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+section.work-process ul li .overlay.notActive {
+  -webkit-transform: scaleY(2);
+          transform: scaleY(2);
+  overflow: hidden;
 }
 
 section.work-process ul li span.num {
@@ -481,20 +518,28 @@ section.work-process ul li span.num i {
 }
 
 section.work-process ul li p:first-of-type {
+  position: relative;
   font-size: 20px;
   font-weight: bold;
   color: #2596be;
   margin-top: 10px;
+  z-index: 5;
+}
+
+section.work-process ul li figure {
+  position: relative;
 }
 
 section.work-process ul li p:last-of-type {
+  position: relative;
   color: #808080;
+  z-index: 5;
 }
 
 footer {
   background: #2596be;
   color: #fff;
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 
 footer ul {
@@ -623,9 +668,8 @@ footer ul.about input[type='email']:focus {
 .go-top button:hover {
   background: #2596be;
   color: #fff;
-  border: none;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .go-top.active {
