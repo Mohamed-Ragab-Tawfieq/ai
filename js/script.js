@@ -52,6 +52,9 @@ $('.mission ul.right li:last-child').click(function () {
 
 /* ---------- solutions section ---------- */
 $('section.solutions li').hover(function () {
+  $(this).find('.overlay').toggleClass('active');
+});
+$('section.solutions li').hover(function () {
   $(this).find('span').toggleClass('fa-spin');
   $(this).find('span .fa-circle').fadeToggle(200);
 });
