@@ -283,6 +283,7 @@ section.solutions {
         transform-origin: top;
         transition: all 0.5s ease-in-out;
         background: linear-gradient(90deg, $primary, $secondary);
+        z-index: 4;
       }
       .overlay.active {
         transform: scaleY(1);
@@ -491,6 +492,7 @@ section.work-process {
         transform-origin: top;
         transition: all 0.5s ease-in-out;
         background: linear-gradient(90deg, $primary, $secondary);
+        z-index: 4;
       }
       .overlay.active {
         transform: scaleY(1);

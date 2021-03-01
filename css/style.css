@@ -275,6 +275,7 @@ section.solutions ul li .overlay {
   transition: all 0.5s ease-in-out;
   background: -webkit-gradient(linear, left top, right top, from(#2596be), to(#9ec452));
   background: linear-gradient(90deg, #2596be, #9ec452);
+  z-index: 4;
 }
 
 section.solutions ul li .overlay.active {
@@ -494,6 +495,7 @@ section.work-process ul li .overlay {
   transition: all 0.5s ease-in-out;
   background: -webkit-gradient(linear, left top, right top, from(#2596be), to(#9ec452));
   background: linear-gradient(90deg, #2596be, #9ec452);
+  z-index: 4;
 }
 
 section.work-process ul li .overlay.active {
